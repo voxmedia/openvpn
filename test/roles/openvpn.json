@@ -1,0 +1,30 @@
+{
+    "name": "openvpn",
+    "description": "",
+    "json_class": "Chef::Role",
+    "default_attributes": {
+        "openvpn": {
+            "script_security": 2,
+            "routes": [
+                "push 'route 10.64.0.0 255.255.0.0'",
+                "push 'route 10.1.0.0 255.255.0.0'",
+                "push 'route 172.31.253.0 255.255.255.0'",
+                "push 'route 172.28.30.0 255.255.255.0'",
+                "push 'route 172.28.29.0 255.255.255.0'"
+            ],
+            "key": {
+                "country": "US",
+                "province": "District of Columbia",
+                "city": "Washington",
+                "org": "Vox Media, Inc",
+                "email": "operations-team@voxmedia.com"
+            }
+        }
+    },
+    "override_attributes": {},
+    "chef_type": "role",
+    "run_list": [
+        "recipe[openvpn::default]"
+    ],
+    "env_run_lists": {}
+}
