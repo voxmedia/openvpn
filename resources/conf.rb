@@ -35,7 +35,7 @@ attribute :group, :kind_of => String
 attribute :log, :kind_of => String
 attribute :verb, :kind_of => Integer, :default => 1
 attribute :mute, :kind_of => Integer, :default => 10
-attribute :dhcp_dns, :kind_of => String
+attribute :dhcp_dns, :kind_of => Array
 attribute :dhcp_domain, :kind_of => String
 attribute :tls_key, :kind_of => String
 attribute :duplicate_cn, :kind_of => [TrueClass, FalseClass], :default => false

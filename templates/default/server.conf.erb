@@ -28,7 +28,9 @@ up /etc/openvpn/server.up.sh
 <% end -%>
 
 <% if @dhcp_dns -%>
-push "dhcp-option DNS <%= @dhcp_dns %>"
+<% @dhcp_dns.each do |dns| -%>
+push "dhcp-option DNS <%= dns %>"
+<% end -%>
 <% end -%>
 <% if @dhcp_domain -%>
 push "dhcp-option DOMAIN <%= @dhcp_domain %>"
