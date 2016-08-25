@@ -7,7 +7,7 @@
             "script_security": 2,
             "port": "31194",
             "gateway": "oob.voxops.net",
-            "local": "10.55.0.19",
+            "local": "10.0.2.15",
             "routes": [
                 "push 'route 10.64.0.0 255.255.0.0'",
                 "push 'route 10.1.0.0 255.255.0.0'",

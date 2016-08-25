@@ -49,3 +49,8 @@ default['openvpn']['key']['province']  = 'CA'
 default['openvpn']['key']['city']      = 'SanFrancisco'
 default['openvpn']['key']['org']       = 'Fort-Funston'
 default['openvpn']['key']['email']     = 'me@example.com'
+
+
+# Vox Additions
+default['openvpn']['cipher']           = 'AES-256-CBC'
+default['openvpn']['crl_path']         = '/etc/openvpn/crl.pem'

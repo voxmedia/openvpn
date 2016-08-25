@@ -136,6 +136,8 @@ openvpn_conf 'server' do
   group node['openvpn']['group']
   log node['openvpn']['log']
   dhcp_dns node['openvpn']['dhcp_dns']
+  cipher node['openvpn']['cipher']
+  crl_path node['openvpn']['crl_path']
   only_if { node['openvpn']['configure_default_server'] }
   notifies :restart, 'service[openvpn]'
 end

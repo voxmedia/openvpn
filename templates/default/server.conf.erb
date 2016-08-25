@@ -51,7 +51,14 @@ dh   <%= @key_dir %>/dh<%= @key_size %>.pem
 <% if @tls_key -%>
 tls-auth <%= @tls_key %> 0
 <% end -%>
-crl-verify /etc/openvpn/crl.pem
+
+<% if @crl_path -%>
+crl-verify <%= @crl_path %>
+<% end -%>
+
+<% if @cipher -%>
+cipher <%= @cipher %>
+<% end -%>
 
 ifconfig-pool-persist /etc/openvpn/ipp.txt
 

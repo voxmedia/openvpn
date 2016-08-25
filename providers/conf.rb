@@ -35,7 +35,9 @@ action :create do
     :client_subnet_route => new_resource.client_subnet_route,
     :max_clients => new_resource.max_clients,
     :status_log => new_resource.status_log,
-    :plugins => new_resource.plugins
+    :plugins => new_resource.plugins,
+    :crl_path => new_resource.crl_path,
+    :cipher => new_resource.cipher,
   }
 
   template "/etc/openvpn/#{new_resource.name}.conf" do
